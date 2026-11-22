@@ -58,14 +58,39 @@ do{
 
     cout << "Masukan NIM : ";
     cin >> nim;
-    cout <<"Masukan Nilai Tugas :";
-    cin >> nilaiTugas;
-    cout <<"Masukan Nilai Kuis :";
-    cin >> nilaiKuis;
-    cout <<"Masukan Nilai UTS :";
-    cin >> nilaiUTS;
-    cout <<"Masukan Nilai UAS :";
-    cin >> nilaiUAS;
+    // validasi nilai tugas
+    do {
+        cout <<"masukan nilai Tugas : ";
+        cin >> nilaiTugas;
+        if(nilaiTugas <= 0 || nilaiTugas > 100){
+            cout << "nilai tugas tidak valid. Ulangi!\n";
+        }
+    }while (nilaiTugas <=0 || nilaiTugas > 100);
+
+    // validasi nilai kuis
+    do {
+        cout << "Masukan Nilai Kuis : ";
+        cin >> nilaiKuis;
+        if (nilaiKuis <= 0 || nilaiKuis > 100){
+            cout<< "Nilai tidak valid ulangi \n";
+        }
+    }while (nilaiKuis <= 0 || nilaiKuis > 100);
+    // validasi nilai UTS
+    do {
+        cout << "Masukan Nilai UTS : ";
+        cin >> nilaiUTS;
+        if (nilaiUTS <= 0 || nilaiUTS > 100){
+            cout << "Nilai tidak valid ulangi \n";
+        }
+    }while (nilaiUTS <= 0 || nilaiUTS > 100);
+    // validasi nilai UAS
+    do {
+        cout << "Masukan Nilai UAS :";
+        cin >> nilaiUAS;
+        if (nilaiUAS <= 0 || nilaiUAS > 100){
+            cout <<"Nilai tidak valid ulangi!\n";
+        }
+    }while (nilaiUAS <= 0 || nilaiUAS > 100);
 
     cetakLaporan(nama, nim, nilaiTugas, nilaiKuis, nilaiUTS, nilaiUAS);
     cout << "apakah anda ingin menambah data lagi Y/N : ";
