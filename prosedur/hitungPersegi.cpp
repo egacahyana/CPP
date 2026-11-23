@@ -22,6 +22,7 @@ int main(){
     double panjang, lebar;
     char ulangi;
     int pilihan;
+    
     do{
     tampilkanHeader();
     cout<< "Masukan Nilai Panjang : ";
